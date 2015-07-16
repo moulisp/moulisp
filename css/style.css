@@ -1,0 +1,556 @@
+body {
+  /*color: $primary-color;*/
+  background-color: #7d7f72; }
+
+#slider {
+  /* background: $bg-color url(../images/map.png) repeat-x scroll 0 120px;*/
+  width: 80%;
+  position: relative;
+  height: 650px;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  /*Position the arrows */
+  /*To remove the arrow on left in first slide*/
+  /*To remove the arrow on right in last slide*/
+  /*Position the arrows - End*/
+  /* To make the selected slide opacity to 1*/ }
+  #slider .certi-1 {
+    position: absolute;
+    z-index: 1100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 55%;
+    left: 15%; }
+  #slider .certi-2 {
+    position: absolute;
+    z-index: 1100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 55%;
+    left: 40%; }
+  #slider .content {
+    background: #7d7f72 url(../images/grid.png) repeat scroll 0 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    #slider .content .parallax-bg {
+      background: url(../images/map.png) repeat-x scroll 0 0;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+    #slider .content .slider {
+      position: relative;
+      left: 0;
+      width: 500%;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      transition: left ease-in 0.8s; }
+      #slider .content .slider li {
+        color: #fff;
+        width: 20%;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0 60px;
+        float: left;
+        position: relative;
+        opacity: 0.4;
+        transition: opacity ease-in 0.4s 0.8s; }
+        #slider .content .slider li img {
+          box-sizing: border-box;
+          display: block;
+          margin: 0 auto;
+          padding-left: 70%;
+          padding-top: 10%;
+          max-height: 100%;
+          max-width: 100%; }
+        #slider .content .slider li > span {
+          box-sizing: border-box;
+          position: absolute;
+          height: 40%;
+          width: 10%;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border-radius: 25px;
+          background-color: rgba(0, 0, 0, 0.2);
+          left: 72%;
+          top: 50%;
+          min-height: 200px;
+          min-width: 20%;
+          padding: 10px; }
+          #slider .content .slider li > span > span {
+            left: 40%;
+            position: absolute; }
+          #slider .content .slider li > span > p {
+            padding: 10px; }
+          #slider .content .slider li > span p:first-of-type {
+            font: italic bold 2.5em "Monotype Corsiva";
+            padding: 2px;
+            text-align: center;
+            margin: 0px; }
+  #slider input {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    z-index: 1001;
+    cursor: pointer;
+    opacity: 0; }
+  #slider input + label {
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    width: 9px;
+    height: 9px;
+    display: block;
+    z-index: 1000;
+    border: 3px solid #fff;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: background-color linear 0.1s; }
+  #slider input:checked + label {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); }
+  #slider .parallax-bg {
+    background: url(../images/map.png) repeat-x scroll 0 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  #slider .arrow {
+    position: absolute;
+    top: 40%;
+    width: 28px;
+    height: 38px;
+    margin-top: -19px;
+    display: none;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 1000;
+    background: transparent url(../images/arrows.png) no-repeat;
+    transition: opacity linear 0.3s; }
+  #slider .arrow:hover {
+    opacity: 1; }
+  #slider .arrow:active {
+    margin-top: -18px; }
+  #slider .selector-1:checked ~ .arrow.a2 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-2:checked ~ .arrow.a3 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-3:checked ~ .arrow.a4 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-4:checked ~ .arrow.a5 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-2:checked ~ .arrow.a1 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-3:checked ~ .arrow.a2 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-4:checked ~ .arrow.a3 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-5:checked ~ .arrow.a4 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider input.selector-1:checked ~ .content .slider > li:first-child {
+    opacity: 1; }
+  #slider input.selector-2:checked ~ .content .slider > li:nth-child(2) {
+    opacity: 1; }
+  #slider input.selector-3:checked ~ .content .slider > li:nth-child(3) {
+    opacity: 1; }
+  #slider input.selector-4:checked ~ .content .slider > li:nth-child(4) {
+    opacity: 1; }
+  #slider input.selector-5:checked ~ .content .slider > li:nth-child(5) {
+    opacity: 1; }
+  #slider .button-label-1 {
+    margin-left: -36px; }
+  #slider .button-label-2 {
+    margin-left: -18px; }
+  #slider .button-label-4 {
+    margin-left: 18px; }
+  #slider .button-label-5 {
+    margin-left: 36px; }
+  #slider .selector-1:checked ~ .arrow.a2 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-2:checked ~ .arrow.a3 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-3:checked ~ .arrow.a4 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-4:checked ~ .arrow.a5 {
+    right: 15px;
+    display: block;
+    background-position: top right; }
+  #slider .selector-2:checked ~ .arrow.a1 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-3:checked ~ .arrow.a2 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-4:checked ~ .arrow.a3 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider .selector-5:checked ~ .arrow.a4 {
+    left: 15px;
+    display: block;
+    background-position: top left; }
+  #slider input:checked ~ .content {
+    transition: background-position linear 0.6s, background-color linear 0.8s; }
+  #slider input:checked ~ .content .parallax-bg {
+    transition: background-position linear 0.7s; }
+  #slider input.selector-1:checked ~ .content {
+    background-position: 0px 0;
+    background-color: #727b7f; }
+  #slider input.selector-2:checked ~ .content {
+    background-position: -100px 0;
+    background-color: #7f7276; }
+  #slider input.selector-3:checked ~ .content {
+    background-position: -200px 0;
+    background-color: #737f72; }
+  #slider input.selector-4:checked ~ .content {
+    background-position: -300px 0;
+    background-color: #79727f; }
+  #slider input.selector-5:checked ~ .content {
+    background-position: -400px 0;
+    background-color: #7d7f72; }
+  #slider input.selector-1:checked ~ .content .parallax-bg {
+    background-position: 0px 0; }
+  #slider input.selector-1:checked ~ .content .slider {
+    left: 0%; }
+  #slider input.selector-2:checked ~ .content .parallax-bg {
+    background-position: -200px 0; }
+  #slider input.selector-2:checked ~ .content .slider {
+    left: -100%; }
+  #slider input.selector-3:checked ~ .content .parallax-bg {
+    background-position: -400px 0; }
+  #slider input.selector-3:checked ~ .content .slider {
+    left: -200%; }
+  #slider input.selector-4:checked ~ .content .parallax-bg {
+    background-position: -600px 0; }
+  #slider input.selector-4:checked ~ .content .slider {
+    left: -300%; }
+  #slider input.selector-5:checked ~ .content .parallax-bg {
+    background-position: -800px 0; }
+  #slider input.selector-5:checked ~ .content .slider {
+    left: -400%; }
+
+/* Rating star*/
+.rating-5 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-5:after {
+  content: "";
+  display: block;
+  width: 5%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-10 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-10:after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-15 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-15:after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-20 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-20:after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-25 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-25:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-30 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-30:after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-35 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-35:after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-40 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-40:after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-45 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-45:after {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-50 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-50:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-55 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-55:after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-60 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-60:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-65 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-65:after {
+  content: "";
+  display: block;
+  width: 65%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-70 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-70:after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-75 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-75:after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-80 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-80:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-85 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-85:after {
+  content: "";
+  display: block;
+  width: 85%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-90 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-90:after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-95 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-95:after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+.rating-100 {
+  display: block;
+  width: 65px;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 0; }
+
+.rating-100:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 13px;
+  background: url(http://r2sites.com/YellowPages/star-rating-sprite.png) 0 -13px; }
+
+h1 {
+  font: italic bold 5em "Monotype Corsiva";
+  position: absolute;
+  text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.8);
+  z-index: 1100; }
+
+h1.firstName {
+  top: 5%;
+  left: 20%; }
+
+h1.LastName {
+  top: 15%;
+  left: 30%; }
+
+h2 {
+  position: absolute;
+  font: bold 3em "Monotype Corsiva";
+  top: 35%;
+  left: 25%;
+  z-index: 1100; }
+
+input {
+  position: absolute; }
+
+/*# sourceMappingURL=style.css.map */
