@@ -1,0 +1,62 @@
+{
+                        "name": "All Users",
+                        "num_users": 3,
+                        "children": [
+                            {
+                                "name": "Admins",
+                                "num_users": 9,
+                                "children": [
+                                    {
+                                        "name": "Authors",
+                                        "num_users": 3,
+                                        "children": [
+                                            {
+                                                "name": "Editors",
+                                                "num_users": 2,
+                                                "children": [
+                                                    {
+                                                        "name": "Editors",
+                                                        "num_users": 1,
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Editors",
+                                "num_users": 7,
+                                "children": [
+                                    {
+                                        "name": "Editors",
+                                        "num_users": 1,
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Editors",
+                                "num_users": 3,
+                                "children": [
+                                    {
+                                        "name": "Editors",
+                                        "num_users": 1,
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Editors",
+                                "num_users": 4,
+                                "children": [
+                                    {
+                                        "name": "Editors",
+                                        "num_users": 1,
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
